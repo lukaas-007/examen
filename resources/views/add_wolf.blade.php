@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ __("add_wolf.title") }}</title>
     
-    @vite(['resources/css/app.css', 'resources/css/add_wolf.css'])
+    @vite(['resources/css/app.css', 'resources/css/add_wolf.css', 'resources/js/add_wolf.js'])
 </head>
 <body>
     {{ __('add_wolf.title') }}
@@ -54,11 +54,8 @@
     <form action="{{ route('add_wolf') }}" method="POST">
         @csrf
 
-        <select option="area">
-            <option value="a1">{{ __('add_wolf.area1') }}</option>
-            <option value="a2">{{ __('add_wolf.area2') }}</option>
-            <option value="a1">{{ __('add_wolf.area3') }}</option>
-        </select>   
+        <label for="area">{{ __('add_wolf.area') }}</label>
+        <input type="text" id="area" name="area" required> 
 
         <label for="count">{{ __('add_wolf.count') }}</label>
         <input type="number" id="count" name="count" required>
