@@ -2,5 +2,6 @@
 
 return [
     'title' => 'Wolf toevoegen',
-    'test' => 'tedtt',
+    'amount' => 'Hoeveelheid',
+    'submit' => 'Toevoegen',
 ];

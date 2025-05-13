@@ -32,11 +32,33 @@ body{
         }
 
         form {
-            background-color: red;
-
             display: flex;
             flex-direction: column;
-            width: 70vw;
+            width: 70%;
+
+            input, button {
+                width: 70%;
+                margin: 0.5rem 15%;
+
+                padding: 8px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+            }
+
+            button {
+                background-color: #4285F4;
+                text-align: left;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #2963c0;
+                }
+            }
+
+            .link {
+                // +8 so it alligns with the text. (8 px is the padding we add) 
+                margin-left: calc(15% + 8px);
+            }
         }
     }
 }

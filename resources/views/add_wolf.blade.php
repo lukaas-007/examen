@@ -54,8 +54,7 @@
 
             <input type="hiden" id="area" name="area" hidden> 
 
-            <label for="amount">{{ __('add_wolf.count') }}</label>
-            <input type="number" id="amount" name="amount" required>
+            <input type="number" id="amount" name="amount" placeholder="{{ __('add_wolf.amount') }}" required>
 
             <button type="submit">{{ __('add_wolf.submit') }}</button>
 

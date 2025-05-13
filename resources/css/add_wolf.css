@@ -54,7 +54,6 @@ body main .map img.selected {
 }
 
 body main form {
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,6 +61,28 @@ body main form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70vw;
+  width: 70%;
+}
+
+body main form input, body main form button {
+  width: 70%;
+  margin: 0.5rem 15%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body main form button {
+  background-color: #4285F4;
+  text-align: left;
+  cursor: pointer;
+}
+
+body main form button:hover {
+  background-color: #2963c0;
+}
+
+body main form .link {
+  margin-left: calc(15% + 8px);
 }
 /*# sourceMappingURL=add_wolf.css.map */
