@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ __("add_wolf.title") }}</title>
+    
+    @vite(['resources/css/app.css', 'resources/css/add_wolf.css'])
 </head>
 <body>
-    @vite(['resources/css/app.css', 'resources/css/add_wolf.css'])
     {{ __('add_wolf.title') }}
 
-    <hr>
+    <br>
+    <br>
 
     <div class="map">
         <img src="/images/1A.jpg" alt="">
@@ -47,7 +49,7 @@
         <img src="/images/6C.jpg" alt="">
         <img src="/images/6D.jpg" alt="">
         <img src="/images/6E.jpg" alt="">
-ß    </div>
+    </div>
 
     <form action="{{ route('add_wolf') }}" method="POST">
         @csrf
