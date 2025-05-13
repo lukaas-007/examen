@@ -7,6 +7,6 @@
 </head>
 <body>
     @vite(['resources/css/app.css', 'resources/css/add_wolf.css'])
-    test
+    {{ __('add_wolf.test') }}
 </body>
 </html>
