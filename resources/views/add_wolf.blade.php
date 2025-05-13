@@ -51,13 +51,13 @@
         <img src="/images/6E.jpg" alt="">
     </div>
 
-    <form action="{{ route('add_wolf') }}" method="POST">
+    <form action="{{ route('add') }}" method="POST">
         @csrf
 
         <input type="hiden" id="area" name="area" hidden> 
 
-        <label for="count">{{ __('add_wolf.count') }}</label>
-        <input type="number" id="count" name="count" required>
+        <label for="amount">{{ __('add_wolf.count') }}</label>
+        <input type="number" id="amount" name="amount" required>
 
         <button type="submit">{{ __('add_wolf.submit') }}</button>
     </form> 
