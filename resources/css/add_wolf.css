@@ -6,6 +6,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
 }
 
 body main {
@@ -22,7 +23,17 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70vh;
+  height: 90vh;
+}
+
+@media screen and (max-width: 768px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
 }
 
 body main .map {
@@ -33,17 +44,15 @@ body main .map {
   -ms-grid-rows: (1fr)[5];
       grid-template-rows: repeat(5, 1fr);
   max-height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  body main .map {
-    height: 50vh;
-  }
+  aspect-ratio: 1/1;
+  height: 80vh;
+  margin: auto auto;
 }
 
 body main .map img {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   -webkit-filter: grayscale(50%);
           filter: grayscale(50%);
 }
@@ -51,6 +60,15 @@ body main .map img {
 body main .map img.selected {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+@media screen and (max-width: 768px) {
+  body main .map {
+    height: 50vh;
+    max-height: 50vh;
+    width: auto;
+    overflow: hidden;
+  }
 }
 
 body main form {
@@ -62,6 +80,7 @@ body main form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 70%;
+  max-width: 30vw;
 }
 
 body main form input, body main form button {
