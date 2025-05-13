@@ -38,7 +38,5 @@
             </a>
         </form> 
     </main>
-
-    
 </body>
 </html>
