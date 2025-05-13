@@ -12,41 +12,17 @@
 
     <main>
         <div class="map">
-            <img src="/images/1A.jpg" class="selected" alt="">
-            <img src="/images/1B.jpg" class="selected" alt="">
-            <img src="/images/1C.jpg" class="selected" alt="">
-            <img src="/images/1D.jpg" class="selected" alt="">
-            <img src="/images/1E.jpg" class="selected" alt="">
 
-            <img src="/images/2A.jpg" class="selected" alt="">
-            <img src="/images/2B.jpg" class="selected" alt="">
-            <img src="/images/2C.jpg" class="selected" alt="">
-            <img src="/images/2D.jpg" class="selected" alt="">
-            <img src="/images/2E.jpg" class="selected" alt="">
+            @php 
+                $areasX = ['1', '2', '3', '4', '5'];
+                $areasY = ['A', 'B', 'C', 'D', 'E'];
+            @endphp
 
-            <img src="/images/3A.jpg" class="selected" alt="">
-            <img src="/images/3B.jpg" class="selected" alt="">
-            <img src="/images/3C.jpg" class="selected" alt="">
-            <img src="/images/3D.jpg" class="selected" alt="">
-            <img src="/images/3E.jpg" class="selected" alt="">
-
-            <img src="/images/4A.jpg" class="selected" alt="">
-            <img src="/images/4B.jpg" class="selected" alt="">   
-            <img src="/images/4C.jpg" class="selected" alt="">
-            <img src="/images/4D.jpg" class="selected" alt="">
-            <img src="/images/4E.jpg" class="selected" alt="">
-
-            <img src="/images/5A.jpg" class="selected" alt="">
-            <img src="/images/5B.jpg" class="selected" alt="">
-            <img src="/images/5C.jpg" class="selected" alt="">
-            <img src="/images/5D.jpg" class="selected" alt="">
-            <img src="/images/5E.jpg" class="selected" alt="">
-
-            <img src="/images/6A.jpg" class="selected" alt="">
-            <img src="/images/6B.jpg" class="selected" alt="">
-            <img src="/images/6C.jpg" class="selected" alt="">
-            <img src="/images/6D.jpg" class="selected" alt="">
-            <img src="/images/6E.jpg" class="selected" alt="">
+            @foreach ($areasX as $x)
+                @foreach ($areasY as $y)
+                    <img src="/images/{{ $x }}{{ $y }}.jpg" class="area" alt="">
+                @endforeach
+            @endforeach
         </div>
 
         <form action="{{ route('add') }}" method="POST">
