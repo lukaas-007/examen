@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    text-align: center;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+    }
+
+}
