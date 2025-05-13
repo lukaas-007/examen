@@ -8,10 +8,7 @@
     @vite(['resources/css/app.css', 'resources/css/add_wolf.css', 'resources/js/add_wolf.js'])
 </head>
 <body>
-    {{ __('add_wolf.title') }}
-
-    <br>
-    <br>
+    <h1 class="title">{{ __('add_wolf.title') }}</h1>
 
     <div class="map">
         <img src="/images/1A.jpg" alt="">
@@ -62,7 +59,7 @@
         <button type="submit">{{ __('add_wolf.submit') }}</button>
     </form> 
 
-    <a href="{{ route('overview') }}">
+    <a href="{{ route('overview') }}" class="link">
         {{ __('overview.title') }}
     </a>
 </body>
