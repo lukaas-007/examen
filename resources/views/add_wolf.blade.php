@@ -12,7 +12,6 @@
 
     <main>
         <div class="map">
-
             @php 
                 $areasX = ['1', '2', '3', '4', '5'];
                 $areasY = ['A', 'B', 'C', 'D', 'E'];
