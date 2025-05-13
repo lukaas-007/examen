@@ -24,6 +24,12 @@ body{
         img {
             width: 100%;
             height: 100%;
+
+            filter: grayscale(50%);
+
+            &.selected {
+                filter: grayscale(0%);
+            }
         }
     }
 

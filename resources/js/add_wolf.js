@@ -5,6 +5,13 @@ const mapAreas = map.querySelectorAll("img");
 
 mapAreas.forEach(mapArea => {
     mapArea.addEventListener("click", (event) => {
+        
+        mapAreas.forEach(mapArea => {
+            mapArea.classList.remove("selected");
+        });
+
+        mapArea.classList.add("selected");
+        
         let url = mapArea.src;
 
         // remove the .jpg from the url
@@ -13,8 +20,8 @@ mapAreas.forEach(mapArea => {
         // remove everything before the last /
         let area = url.substring(url.lastIndexOf("/") + 1);
 
-        alert(area);
-
         document.querySelector("#area").value = area;
+
+        document.querySelector("#count").focus();
     });
 });

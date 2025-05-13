@@ -54,8 +54,7 @@
     <form action="{{ route('add_wolf') }}" method="POST">
         @csrf
 
-        <label for="area">{{ __('add_wolf.area') }}</label>
-        <input type="text" id="area" name="area" required> 
+        <input type="hiden" id="area" name="area" hidden> 
 
         <label for="count">{{ __('add_wolf.count') }}</label>
         <input type="number" id="count" name="count" required>
