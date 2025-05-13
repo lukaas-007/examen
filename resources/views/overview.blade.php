@@ -8,5 +8,9 @@
 <body>
     @vite(['resources/css/app.css', 'resources/css/add_wolf.css'])
     {{ __('overview.overview') }}
+
+    <a href="{{ route('add_wolf') }}">
+        {{ __('add_wolf.title') }}
+    </a>
 </body>
 </html>
