@@ -10,57 +10,61 @@
 <body>
     <h1 class="title">{{ __('add_wolf.title') }}</h1>
 
-    <div class="map">
-        <img src="/images/1A.jpg" alt="">
-        <img src="/images/1B.jpg" alt="">
-        <img src="/images/1C.jpg" alt="">
-        <img src="/images/1D.jpg" alt="">
-        <img src="/images/1E.jpg" alt="">
+    <main>
+        <div class="map">
+            <img src="/images/1A.jpg" alt="">
+            <img src="/images/1B.jpg" alt="">
+            <img src="/images/1C.jpg" alt="">
+            <img src="/images/1D.jpg" alt="">
+            <img src="/images/1E.jpg" alt="">
 
-        <img src="/images/2A.jpg" alt="">
-        <img src="/images/2B.jpg" alt="">
-        <img src="/images/2C.jpg" alt="">
-        <img src="/images/2D.jpg" alt="">
-        <img src="/images/2E.jpg" alt="">
+            <img src="/images/2A.jpg" alt="">
+            <img src="/images/2B.jpg" alt="">
+            <img src="/images/2C.jpg" alt="">
+            <img src="/images/2D.jpg" alt="">
+            <img src="/images/2E.jpg" alt="">
 
-        <img src="/images/3A.jpg" alt="">
-        <img src="/images/3B.jpg" alt="">
-        <img src="/images/3C.jpg" alt="">
-        <img src="/images/3D.jpg" alt="">
-        <img src="/images/3E.jpg" alt="">
+            <img src="/images/3A.jpg" alt="">
+            <img src="/images/3B.jpg" alt="">
+            <img src="/images/3C.jpg" alt="">
+            <img src="/images/3D.jpg" alt="">
+            <img src="/images/3E.jpg" alt="">
 
-        <img src="/images/4A.jpg" alt="">
-        <img src="/images/4B.jpg" alt="">   
-        <img src="/images/4C.jpg" alt="">
-        <img src="/images/4D.jpg" alt="">
-        <img src="/images/4E.jpg" alt="">
+            <img src="/images/4A.jpg" alt="">
+            <img src="/images/4B.jpg" alt="">   
+            <img src="/images/4C.jpg" alt="">
+            <img src="/images/4D.jpg" alt="">
+            <img src="/images/4E.jpg" alt="">
 
-        <img src="/images/5A.jpg" alt="">
-        <img src="/images/5B.jpg" alt="">
-        <img src="/images/5C.jpg" alt="">
-        <img src="/images/5D.jpg" alt="">
-        <img src="/images/5E.jpg" alt="">
+            <img src="/images/5A.jpg" alt="">
+            <img src="/images/5B.jpg" alt="">
+            <img src="/images/5C.jpg" alt="">
+            <img src="/images/5D.jpg" alt="">
+            <img src="/images/5E.jpg" alt="">
 
-        <img src="/images/6A.jpg" alt="">
-        <img src="/images/6B.jpg" alt="">
-        <img src="/images/6C.jpg" alt="">
-        <img src="/images/6D.jpg" alt="">
-        <img src="/images/6E.jpg" alt="">
-    </div>
+            <img src="/images/6A.jpg" alt="">
+            <img src="/images/6B.jpg" alt="">
+            <img src="/images/6C.jpg" alt="">
+            <img src="/images/6D.jpg" alt="">
+            <img src="/images/6E.jpg" alt="">
+        </div>
 
-    <form action="{{ route('add') }}" method="POST">
-        @csrf
+        <form action="{{ route('add') }}" method="POST">
+            @csrf
 
-        <input type="hiden" id="area" name="area" hidden> 
+            <input type="hiden" id="area" name="area" hidden> 
 
-        <label for="amount">{{ __('add_wolf.count') }}</label>
-        <input type="number" id="amount" name="amount" required>
+            <label for="amount">{{ __('add_wolf.count') }}</label>
+            <input type="number" id="amount" name="amount" required>
 
-        <button type="submit">{{ __('add_wolf.submit') }}</button>
-    </form> 
+            <button type="submit">{{ __('add_wolf.submit') }}</button>
 
-    <a href="{{ route('overview') }}" class="link">
-        {{ __('overview.title') }}
-    </a>
+            <a href="{{ route('overview') }}" class="link">
+                {{ __('overview.title') }}
+            </a>
+        </form> 
+    </main>
+
+    
 </body>
 </html>
