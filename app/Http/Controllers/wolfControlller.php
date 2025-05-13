@@ -9,7 +9,7 @@ class wolfControlller extends Controller
 {
     public function overview()
     {
-        $wolves = Wolf::all();
+        $wolves = Wolf::orderBy('id', 'desc')->get();
 
         return view('overview', [
             'wolves' => $wolves,
