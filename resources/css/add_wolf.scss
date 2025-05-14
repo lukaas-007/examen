@@ -76,11 +76,6 @@ body{
                 border: 1px solid #ccc;
             }
 
-            select {
-                width: 80%;
-                margin: 0.5rem 10%;
-            }
-
             button {
                 background-color: #4285F4;
                 text-align: left;
@@ -102,7 +97,7 @@ body{
                 margin: 0;
                 padding: 0;
 
-                input, button {
+                input, button, select {
                     width: 80%;
                     margin: 0.5rem 10%;
                     padding: 8px;
