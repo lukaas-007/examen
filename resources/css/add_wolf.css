@@ -58,7 +58,7 @@ body main form {
   max-width: 30vw;
   margin: auto;
 }
-body main form input, body main form button {
+body main form input, body main form button, body main form select {
   width: 70%;
   margin: 0.5rem 15%;
   padding: 8px;
