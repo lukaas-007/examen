@@ -9,19 +9,11 @@ mapAreas.forEach(mapArea => {
         mapAreas.forEach(mapArea => {
             mapArea.classList.remove("selected");
         });
-
         mapArea.classList.add("selected");
         
-        let url = mapArea.src;
-
-        // remove the .jpg from the url
-        url = url.substring(0, url.length - 4); 
-
-        // remove everything before the last /
-        let area = url.substring(url.lastIndexOf("/") + 1);
-
+        let area = mapArea.getAttribute("title")
         document.querySelector("#area").value = area;
 
-        document.querySelector("#count").focus();
+        document.querySelector("#amount").focus();
     });
 });
