@@ -6,25 +6,22 @@ body{
     main {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items:  flex-start;
         justify-content: center;
-        height: 90vh;
+        height: calc(100vh - 4rem);
 
         @media screen and (max-width: 768px) {
             flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 6rem;
             height: 100vh;
         }
 
         .map {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            max-height: 50vh;
             aspect-ratio: 1/1;
-            height: 50vh;
-            margin: 0 auto;
+            height: auto;
+            margin: auto;
 
             @media screen and (max-width: 768px) {
                 height: 50vh;
@@ -36,7 +33,11 @@ body{
             }
 
             svg {
+
                 path {
+
+                    height: 100%;
+
                     fill: #4285F4;
                     stroke: #2963c0;
                     stroke-width: 2px;
@@ -64,6 +65,7 @@ body{
             flex-direction: column;
             width: 70%;
             max-width: 30vw;
+            margin: auto;
 
             input, button {
                 width: 70%;
