@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Wolf toevoegen',
+    'title' => 'Voeg een wolf toe',
     'amount' => 'Hoeveelheid',
     'submit' => 'Toevoegen',
 ];
