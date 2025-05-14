@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 body table, body th, body td {
-  border: 1px solid black;
+  border: 1px solid #000000;
   border-collapse: collapse;
   padding: 8px;
   text-align: left;

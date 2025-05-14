@@ -21,11 +21,11 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
-    background-color: rgb(144, 255, 144);
+    background-color: #90ff90;
 }
 
 .link {
-    color: blue;
+    color: #0000ff;
     text-decoration: underline;
     cursor: pointer;
 }
