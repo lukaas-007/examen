@@ -65,6 +65,10 @@ body main form input, body main form button, body main form select {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+body main form select {
+  width: 80%;
+  margin: 0.5rem 10%;
+}
 body main form button {
   background-color: #4285F4;
   text-align: left;

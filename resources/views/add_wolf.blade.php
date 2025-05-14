@@ -20,7 +20,7 @@
             @csrf
 
             <select name="area" id="area">
-                <option value="onbekent" selected>{{ __('add_wolf.select') }}</option>  
+                <option value="onbekent" selected>{{ __('add_wolf.select_area') }}</option>  
             </select>
 
             <input type="number" id="amount" name="amount" placeholder="{{ __('add_wolf.amount') }}" required>
