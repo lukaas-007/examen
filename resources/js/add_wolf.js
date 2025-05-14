@@ -26,3 +26,12 @@ mapAreas.forEach(mapArea => {
         document.querySelector("#amount").focus();
     });
 });
+
+areaSelect.addEventListener("change", (event) => {
+    mapAreas.forEach(mapArea => {
+        mapArea.classList.remove("selected");
+    });
+
+    const selectedArea = map.querySelector(`path[title="${areaSelect.value}"]`);
+    selectedArea.classList.add("selected");
+});
