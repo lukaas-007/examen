@@ -9,6 +9,12 @@
     @vite(['resources/css/app.css', 'resources/css/overview.css'])
     <h1 class="title">{{ __('overview.overview') }}</h1>
 
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ __('overview.added_wolf') }}
+        </div>
+    @endif  
+
     <table>
         <thead>
             <tr>

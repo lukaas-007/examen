@@ -17,6 +17,13 @@
     text-align: center;
 }
 
+.alert {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgb(144, 255, 144);
+}
+
 .link {
     color: blue;
     text-decoration: underline;

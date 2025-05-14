@@ -7,4 +7,6 @@ return [
     'date_spotted' => 'gespot op',
     'area_spotted' => 'gebied gespot',
     'spotted_amount' => 'aantal gespot',
+
+    'added_wolf' => 'Wolf toegevoegd',
 ];
