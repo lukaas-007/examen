@@ -12,17 +12,9 @@
 
     <main>
         <div class="map">
-            @php 
-                $areasX = ['1', '2', '3', '4', '5'];
-                $areasY = ['A', 'B', 'C', 'D', 'E'];
-            @endphp
-
-            @foreach ($areasX as $x)
-                @foreach ($areasY as $y)
-                    <img src="/images/{{ $x }}{{ $y }}.jpg" class="area" alt="">
-                @endforeach
-            @endforeach
+            @include('nl_map')
         </div>
+
 
         <form action="{{ route('add') }}" method="POST">
             @csrf

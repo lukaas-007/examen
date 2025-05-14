@@ -1,7 +1,7 @@
 const map = document.querySelector(".map");
 
-// Get all elements in the map
-const mapAreas = map.querySelectorAll("img");
+// Get all provinves in the map
+const mapAreas = map.querySelectorAll("path");
 
 mapAreas.forEach(mapArea => {
     mapArea.addEventListener("click", (event) => {
