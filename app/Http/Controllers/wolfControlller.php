@@ -38,6 +38,28 @@ class wolfControlller extends Controller
         ]);
     }
 
+    public function show() {
+        $allWolves = Wolf::all();
+
+        $wolfPerArea = [];
+
+        foreach ($allWolves as $wolf) {
+            if (isset($wolfPerArea[$wolf->area])) {
+                $wolfPerArea[$wolf->area]['amount'] += $wolf->amount;
+            } else {
+                $wolfPerArea[$wolf->area] = [
+                    'area' => $wolf->area,
+                    'amount' => $wolf->amount,
+                ];
+            }
+        }
+
+        return view('add_wolf', [
+            'wolfPerArea' => $wolfPerArea,
+        ]);
+
+    }
+
     public function add() {
         $wolf = new Wolf();
         $wolf->amount = request('amount');

@@ -11,6 +11,17 @@
     <h1 class="title">{{ __('add_wolf.title') }}</h1>
 
     <main>
+        <script>
+            const wolfPerArea = [
+                @foreach ($wolfPerArea as $area)
+                    {
+                        area: "{{ $area['area'] }}",
+                        amount: {{ $area['amount'] }}
+                    },
+                @endforeach
+            ]
+        </script>
+        
         <div class="map">
             @include('nl_map')
         </div>
@@ -20,7 +31,7 @@
             @csrf
 
             <select name="area" id="area">
-                <option value="onbekent" selected>{{ __('add_wolf.select_area') }}</option>  
+                <option value="onbekent" selected disabled>{{ __('add_wolf.select_area') }}</option>  
             </select>
 
             <input type="number" id="amount" name="amount" placeholder="{{ __('add_wolf.amount') }}" required>
