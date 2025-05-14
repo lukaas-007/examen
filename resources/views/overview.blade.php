@@ -12,18 +12,22 @@
     <table>
         <thead>
             <tr>
-                <th>{{ __('overview.date_spotted') }}</th>
                 <th>{{ __('overview.area_spotted') }}</th>
                 <th>{{ __('overview.spotted_amount') }}</th>
+                <th>{{ __('overview.date_spotted') }}</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach ($wolves as $wolf)
+            @foreach ($wolfPerArea as $wolfList)
                 <tr>
-                    <td>{{ $wolf->created_at }}</td>
-                    <td>{{ $wolf->area }}</td>
-                    <td>{{ $wolf->amount }}</td>
+                    <td>{{ $wolfList['area'] }}</td>
+                    <td>{{ $wolfList['amount'] }}</td>
+                    <td>
+                        @foreach($wolfList['spotted_dates'] as $date)
+                            {{ $date }}<br>
+                        @endforeach
+                    </td>
                 </tr>
             @endforeach
         </tbody>

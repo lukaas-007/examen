@@ -11,8 +11,25 @@ class wolfControlller extends Controller
     {
         $wolves = Wolf::orderBy('id', 'desc')->get();
 
+        // instead of displaying the wolf data we want to show it per area
+        // (Area: xx, spotted: xx, spotted_dates: [])
+        $wolfPerArea = [];
+        foreach ($wolves as $wolf) {
+            if (!isset($wolfPerArea[$wolf->area])) {
+                $wolfPerArea[$wolf->area] = [
+                    'area' => $wolf->area,
+                    'amount' => 0,
+                    'spotted_dates' => [],
+                ];
+            }
+
+            $wolfPerArea[$wolf->area]['amount'] += $wolf->amount;
+            $wolfPerArea[$wolf->area]['spotted_dates'][] = $wolf->created_at->format('Y-m-d');
+        }
+
         return view('overview', [
             'wolves' => $wolves,
+            'wolfPerArea' => $wolfPerArea,
         ]);
     }
 
