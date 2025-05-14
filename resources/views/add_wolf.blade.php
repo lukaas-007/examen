@@ -19,7 +19,7 @@
         <form action="{{ route('add') }}" method="POST">
             @csrf
 
-            <input type="hiden" id="area" name="area" value="??" hidden> 
+            <input type="hiden" id="area" name="area" value="onbekent" hidden> 
 
             <input type="number" id="amount" name="amount" placeholder="{{ __('add_wolf.amount') }}" required>
 

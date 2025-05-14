@@ -31,7 +31,7 @@
                     <td>{{ $wolfList['amount'] }}</td>
                     <td>
                         @foreach($wolfList['spotted_dates'] as $date)
-                            {{ $date }}<br>
+                            {{ $date['date'] }} ({{ $date['amount'] }}) <br>
                         @endforeach
                     </td>
                 </tr>

@@ -16,7 +16,6 @@ class wolfControlller extends Controller
         $wolfPerArea = [];
         foreach ($wolves as $wolf) {
             if (!isset($wolfPerArea[$wolf->area])) {
-
                 // We dont set all the wolf data here, 
                 //just the area becouse we check for the other data after this
                 $wolfPerArea[$wolf->area] = [
@@ -27,7 +26,10 @@ class wolfControlller extends Controller
             }
 
             $wolfPerArea[$wolf->area]['amount'] += $wolf->amount;
-            $wolfPerArea[$wolf->area]['spotted_dates'][] = $wolf->created_at->format('Y-m-d');
+            $wolfPerArea[$wolf->area]['spotted_dates'][] = [
+                'date' => $wolf->created_at->format('Y-m-d'),
+                'amount' => $wolf->amount
+            ];
         }
 
         return view('overview', [
