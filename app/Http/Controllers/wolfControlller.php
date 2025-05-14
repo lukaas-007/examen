@@ -57,7 +57,6 @@ class wolfControlller extends Controller
         return view('add_wolf', [
             'wolfPerArea' => $wolfPerArea,
         ]);
-
     }
 
     public function add() {
